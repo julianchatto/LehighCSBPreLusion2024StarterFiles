@@ -92,7 +92,6 @@ public abstract class Animal implements Comparable<Animal> {
      * @return 1 if this animal is older, -1 if the animal is younger, 0 if they are the same age
      */
     public int compareTo(Animal animal) {
-        if (animal == null) return 1;
         if (age > animal.getAge()) return 1;
         if (age < animal.getAge()) return -1;
         return 0;
