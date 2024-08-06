@@ -1,0 +1,254 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.navBarContain{
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(82, 145, 179);
+    justify-content: center;
+}
+
+.navBarElementsContain{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+}
+
+#logoContain {
+    cursor: pointer;
+}
+
+#logoContain img {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    transition: .1s;
+}
+
+#logoContain:hover img {
+    transform: scale(1.1) rotate(60deg);
+}
+
+.navBarLinkContain {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.navBarLink {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px 40px 0px 40px;
+}
+
+.navBarLinkContain div:hover{
+    background-color: rgb(113, 196, 241);
+    color: black;
+}
+
+.navBarLinkContain div:hover .dropdown{
+    background-color: rgb(113, 196, 241);
+    color: black;
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.dropdown{
+    width: 170px;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: .1;
+    transition: margin 0.1s, opacity 0.1s;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+    margin: 0 !important;
+}
+.dropdown div {
+    padding: 5px 20px 5px 20px;
+    margin: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown div:hover {
+    background-color: rgb(201, 232, 248);
+}
+
+.divider {
+    border-right: 1px white solid;
+    width: 0px;
+    height: 0px !important;
+    padding: 3% 0px 3% 0px !important;
+    margin: 5px;
+    width: 0;
+    cursor: default !important;
+}
+
+.filterButtonsContain{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: max-content;
+}
+
+.filterButtonContain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightgrey;
+    padding: 3px;
+    border-radius: 10px;
+    height: max-content;
+    margin: 5px;
+}
+
+.filterButtonContain input {
+    display: none;
+}
+
+.filterButtonContain label {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.checked{
+    color: white;
+    background-color: #d45732;
+}
+
+.bentoBoxContain{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 33%);
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.elementContain{
+    display: flex;
+    flex-direction: column;
+    padding: -1px;
+    margin: 3px;
+    border: 2px solid lightgrey;
+    border-radius: 15px;
+    padding: 3px;
+    transition: .5s;
+}
+
+.elementTitle{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px 5px 0px 20px;
+    margin: 0;
+}
+.html .elementTitle{
+    background-color: #d45732 !important;
+}
+
+.elementTitle div{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50px;
+
+}
+.elementTitle div img{
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+
+}
+
+.exampleContain {
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #ebebeb;
+    padding: 5px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.exampleContain div{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+}
+
+#text{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+#output {
+    background-color: white;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.code{
+    background-color: white;
+}
+
+#image{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    overflow: visible !important;
+}
+
+.imageContain {
+    width: 200px;
+    display: inline-block;
+    margin-left: 30px !important;
+}
+
+.imageContain img {
+    height: 100px;
+    transition: .5s;
+}
+
+.imageContain img:hover {
+    transform: scale(3);
+}
+
+canvas{
+    transition: .5s;
+}
+
+canvas:hover {
+    transform: scale(3);
+}
+
+video {
+    height: 100px;
+    transition: .5s;
+}
+
+video:hover {
+    transform: scale(3);
+}
