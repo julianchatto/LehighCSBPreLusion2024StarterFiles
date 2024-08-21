@@ -2,26 +2,87 @@ window.onload = () => {
     const form = document.getElementById("form")
     form.addEventListener('submit', submitForm)
     
-    const htmlButton = document.getElementById("filterHtml")
-    htmlButton.addEventListener('change', filterHtml)
+    htmlButton = document.getElementById("filterHtml")
+    htmlButton.addEventListener('change', filterHtmlCotext)
 
-    const cssButton = document.getElementById("filterCss")
-    cssButton.addEventListener('change', filterHtml)
+    if(!hash.html){
+      htmlButton.click()
+    }
 
-    const javascriptButton = document.getElementById("filterJavascript")
-    javascriptButton.addEventListener('change', filterHtml)
+    htmlButton.click()
+
+    cssButton = document.getElementById("filterCss")
+    cssButton.addEventListener('change', filterHtmlCotext)
+
+    if(!hash.css){
+      cssButton.click()
+    }
+
+    cssButton.click()
+
+    javascriptButton = document.getElementById("filterJavascript")
+    javascriptButton.addEventListener('change', filterHtmlCotext)
+
+    if(!hash.javascript){
+      javascriptButton.click()
+    }
+
+    javascriptButton.click()
+
+    if(!hash.javascript && !hash.css && !hash.html){
+      javascriptButton.click()
+      cssButton.click()
+      htmlButton.click()
+    }
+
 
     const canvas = document.getElementById("canvas")
     const canvasContext = canvas.getContext("2d")
     const image = document.getElementById("csbImage")
     
-    console.log("go")
     canvasContext.drawImage(image, 0, 0)
     canvasContext.fillStyle="white"
     canvasContext.fillRect(15, 25, 70, 50)
     canvasContext.font = "30px Arial"
     canvasContext.fillStyle="red"
     canvasContext.fillText("CSB", 20, 60)
+}
+
+let htmlButton
+
+onlyHtml = () => {
+  if(!htmlButton.checked) htmlButton.click()
+  if(cssButton.checked) cssButton.click()
+  if(javascriptButton.checked) javascriptButton.click()
+}
+
+let cssButton
+
+onlyCss = () => {
+  if(htmlButton.checked) htmlButton.click()
+  if(!cssButton.checked) cssButton.click()
+  if(javascriptButton.checked) javascriptButton.click()
+}
+
+let javascriptButton
+
+onlyJavascript = () => {
+  if(htmlButton.checked) htmlButton.click()
+  if(cssButton.checked) cssButton.click()
+  if(!javascriptButton.checked) javascriptButton.click()
+}
+
+const initialHash = window.location.hash.replace('#', '').split(',')
+let hash = {'html': initialHash.indexOf('html') != -1, 'css': initialHash.indexOf('css') != -1, 'javascript': initialHash.indexOf('javascript') != -1}
+
+setNewHash = () => {
+  let newHash = "#"
+  for (let hashKey of Object.keys(hash)){
+    if(hash[hashKey]){
+      newHash += hashKey + ","
+    }
+  }
+  window.location.hash = newHash
 }
 
 submitForm = (event) => {
@@ -36,17 +97,33 @@ submitForm = (event) => {
     }
 }
 
-filterHtml = (event) => {
-  const visibilityValue = event.srcElement.checked ? {visibility: "visible", opacity: 1} : {visibility: "hidden", opacity: 0}
-  if(visibilityValue.opacity){
-    event.srcElement.parentElement.className = "checked"
-  }else {
-    event.srcElement.parentElement.className = null
+filterHtmlCotext = (event) => {
+  const checkBox = event.srcElement
+  if (checkBox.checked){
+    hash[checkBox.value] = true
+    setNewHash()
+  }else{
+    hash[checkBox.value] = false
+    setNewHash()
   }
-  const htmlElements = document.getElementsByClassName(event.srcElement.value)
+  filterHtml(event)
+}
+
+filterHtml = (event) => {
+  const checkBox = event.srcElement
+  const visibilityValue = checkBox.checked ? {visibility: "visible", opacity: 1, display: "flex"} : {visibility: "hidden", opacity: 0, display: "none"}
+  if(checkBox.checked){
+    checkBox.parentElement.style.backgroundColor = checkBox.getAttribute("color")
+    checkBox.parentElement.style.color = "white"
+  }else {
+    checkBox.parentElement.style.backgroundColor = "white"
+    checkBox.parentElement.style.color = checkBox.getAttribute("color")
+  }
+  const htmlElements = document.getElementsByClassName(checkBox.value)
 
   for(const htmlElement of htmlElements){
     htmlElement.style.opacity = visibilityValue.opacity
     htmlElement.style.visibility = visibilityValue.visibility
+    htmlElement.style.display = visibilityValue.display
   }
 }

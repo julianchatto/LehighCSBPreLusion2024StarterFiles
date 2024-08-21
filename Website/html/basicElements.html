@@ -2,61 +2,55 @@
 <html>
 
     <head>
-        <title>Some Basic HTML Elements</title>
+        <title>Some Basic Elements</title>
         <link rel="icon" type="image/x-icon" href="../static/CSBLowRes.png">
     </head>
-    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/basicElements.css">
     <script src="../javaScript/basicElements.js"></script>
 
     <body>
         <div class="navBarContain">
             <div class="navBarElementsContain">
-                <div id="logoContain">
+                <div id="logoContain" class="logoContain">
                     <img src="../static/CSB.svg">
                 </div>
                 <div class="navBarLinkContain">
                     <div class="navBarLink">
-                        <p>Home</p>
+                        <a href="./home.html"><p>Home</p></a>
                     </div>
                     <div class="divider"></div>
                     <div class="navBarLink">
-                        <p>About Us</p>
+                        <a href="./basicElements.html"><p>Elements Examples</p></a>
                         <div class="dropdown">
                             <div>
-                                <p>Our Story</p>
+                                <a onclick="onlyHtml()"><p>HTML</p></a>
                             </div>
                             <div>
-                                <p>Our Mission</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="navBarLink">
-                        <p>Contact Us</p>
-                        <div class="dropdown">
-                            <div>
-                                <p>Customer Support</p>
+                                <a onclick="onlyCss()"><p>CSS</p></a>
                             </div>
                             <div>
-                                <p>Partner Inquires</p>
+                                <a onclick="onlyJavascript()"><p>JavaScript</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="logoContain">
+                <div class="logoContain">
                     <img src="../static/HTML5.png">
+                    <img src="../static/CSS.svg">
+                    <img src="../static/JAVASCRIPT.png">
                 </div>
             </div>
         </div>
         <div class="filterButtonsContain">
             <div class="filterButtonContain">
-                <label class="checked">HTML<input type="checkbox" id="filterHtml" value="html" checked></label>
+                <label class="checked" style="color: #d45732">HTML<input type="checkbox" id="filterHtml" value="html" color="#d45732"></label>
             </div>
             <div class="filterButtonContain">
-                <label class="checked">CSS<input type="checkbox" id="filterCss" value="css" checked></label>
+                <label class="checked" style="color: #334fe3">CSS<input type="checkbox" id="filterCss" value="css" color="#334fe3"></label>
             </div>
             <div class="filterButtonContain">
-                <label class="checked">JavaScript<input type="checkbox" id="filterJavascript" value="javascript" checked></label>
+                <label class="checked" style="color: #d2bb39">JavaScript<input type="checkbox" id="filterJavascript" value="javascript" color="#d2bb39" ></label>
             </div>
         </div>
         <div class="bentoBoxContain">
@@ -315,6 +309,329 @@ Cras in risus nunc.</pre>
                     </div>
                 </div>
             </div>
+            <div id="classes" class="elementContain css">
+                <div class="elementTitle"> 
+                    <h2>Classes</h2>
+                    <div>
+                        <img src="../static/CSS.svg"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <p>
+                            Classes are the identifier of the CSS world. An HTML element will use the styling associated with its given classes, javaScript id, and global type rules.
+                        </p>
+                        <p>Class</p>
 
+                        <p class="code">
+                            .className{<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            }
+                        </p>
+                        <p>ID</p>
+
+                        <p class="code">
+                            #idName{<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            }
+                        </p>
+                        <p>Type</p>
+
+                        <p class="code">
+                            div{<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="colorElement" class="elementContain css">
+                <div class="elementTitle"> 
+                    <h2>Color</h2>
+                    <div>
+                        <img src="../static/CSS.svg"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <p>Color Types:</p>
+                    </div>
+                    <div class="colorContain">
+                        <div>
+
+                            <p class="code">white</p>
+<p>default colors</p>
+                        </div>
+                        <div>
+
+                            <p class="code">#ffffff</p>
+<p>Hexadecimal</p>
+                        </div>
+                        <div>
+
+                            <p class="code">rgba(255, 255, 255, 1)</p>
+<p>Red Green Blue</p>
+                        </div>
+                        <div>
+
+                            <p class="code">hsla(0, 100%, 100%, 1)</p>
+<p>Hue Saturation Lightness</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Color Locations:</p>
+                    </div>
+                    <div class="colorContain">
+                        <div class="backgroundColor">
+                            <p>Background Color</p>
+                        </div>
+                        <div class="color">
+                            <p>Color</p>
+                        </div>
+                        <div class="borderColor">
+                            <p>Border Color</p>
+                        </div>
+                        <div class="all">
+                            <p>All Together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="borderElement" class="elementContain css">
+                <div class="elementTitle"> 
+                    <h2>Border</h2>
+                    <div>
+                        <img src="../static/CSS.svg"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <p>
+                            Borders allow for boxing in divs and smoothing corners
+                        </p>
+                    </div>
+                    <div class="colorContain">
+                        <div class="solid">
+                            <p>Solid Border</p>
+                        </div>
+                        <div class="dotted">
+                            <p>Dotted Border</p>
+                        </div>
+                        <div class="radius">
+                            <p>Border Radius</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="transitions" class="elementContain css">
+                <div class="elementTitle"> 
+                    <h2>Transitions</h2>
+                    <div>
+                        <img src="../static/CSS.svg"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <p>
+                            Transitions seamlessly transition a css property from one value to another when the value changes.
+                        </p>
+                    </div>
+                    <div class="colorContain">
+                        <div class="colorChange">
+                            <p>Color</p>
+                        </div>
+                        <div class="visibilityChange">
+                            <p>Opacity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="displayElement" class="elementContain css">
+                <div class="elementTitle"> 
+                    <h2>Display</h2>
+                    <div>
+                        <img src="../static/CSS.svg"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div class="colorContain">
+                        <div>
+                            <h4>Block</h4>
+                            <p>Block is the default display type. Each element is treat as its own block and each block is placed after each other in a column. Centering and positioning is notoriously difficult. </p>
+                            <div class="makeBlocks">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Inline Block</h4>
+                            <p>Inline block allows for puttin HTML elements in a row. They can also be put inline with text as that is essentially how they're being treated in HTML. This is also difficult to center and position. </p>
+                            <div class="displayInline makeBlocks">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Flex</h4>
+                            <p>Flex boxes make organizing HTML elements easy. The Justify Content and Align Items allow for simple centering and other positional attributes while accounting for variable pages sizes.</p>
+                            <div class="displayFlexContain">
+                                <div>
+                                    <p>Row</p>
+                                    <div class="displayFlex makeBlocks">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Column</p>
+                                    <div class="displayFlex makeBlocks" style="flex-direction: column !important;"> 
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Grid</h4>
+                            <p>Grid is the cousin of flex boxes that allows for creating a 2D grid (This whole page is organized with grid). Grid allows for simple and dynamic placement of elements even with spanning.</p>
+                            <div class="displayGrid makeBlocks">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementContain javascript">
+                <div class="elementTitle"> 
+                    <h2>IDs</h2>
+                    <div>
+                        <img src="../static/JAVASCRIPT.png"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <p>
+                            Much like CSS, javascript uses identifiers to identify HTML elements. JavaScript specific identifiers are called IDs are one to one (an ID cannot be replicated). In JavaScript the HTML is refered to as the document or DOM and using the DOM one can get HTML elements in many different ways.
+                        </p>
+                        <p>ID</p>
+                        <p class="code">document.getElementById("idName")</p>
+                        <p>Class</p>
+
+                        <p class="code">document.getElementsByClassName("className")</p>
+                        <p>Query Selector</p>
+
+                        <p class="code">document.querySelector("div")</p> 
+                    </div>
+                </div>
+            </div>
+            <div id="dom" class="elementContain javascript">
+                <div class="elementTitle"> 
+                    <h2>Modifying DOM</h2>
+                    <div>
+                        <img src="../static/JAVASCRIPT.png"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <p>
+                            Modifying the DOM means changing styles, text, and even HTML elements. Everything is refered to based on parent, child, and sibling elements which can make it hard to understand what is actually being modified.
+                        </p>
+                        <p class="code">
+                            &lt;div&gt; <span style="color: red;">&lt;--- Parent</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt; <span style="color: red;">&lt;--- Selected Element</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p>text&lt;/p&gt; <span style="color: red;">&lt;--- Child</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p>text&lt;/p&gt; <span style="color: red;">&lt;--- Sibling</span><br>
+                            &lt;/div&gt;
+                        </p>
+                    </div>
+                    <div class="colorContain">
+                        <div>
+                            <p>Modify All Children</p>
+                            <p class="code">element.innerHTML = ...</p>
+                        </div>
+                        <div>
+                            <p>Adding children</p>
+                            <p class="code">element.appendChild(...)</p>
+                        </div>
+                        <div>
+                            <p>Modify Style</p>
+                            <p class="code">element.style.backgroundColor = ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="functions" class="elementContain javascript">
+                <div class="elementTitle"> 
+                    <h2>Functions</h2>
+                    <div>
+                        <img src="../static/JAVASCRIPT.png"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <div>
+                            <p>
+                                There are two ways to declare functions in JavaScript. A more traditional, older way and a cleaner modern way.
+                            </p>
+                        </div>
+                        <div class="colorContain">
+                            <div>
+                                <p>Old Way</p>
+                                <p class="code">
+                                    function functionName(parameterName){<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                                    }
+                                </p>
+                            </div>
+                            <div>
+                                <p>New Way</p>
+                                <p class="code">
+                                    functionName = (parameterName) => {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementContain javascript">
+                <div class="elementTitle"> 
+                    <h2>Variables</h2>
+                    <div>
+                        <img src="../static/JAVASCRIPT.png"/>
+                    </div>
+                </div>
+                <div class="exampleContain">
+                    <div>
+                        <div>
+                            <p>
+                                JavaScript is a dynamically typed language. This means all variables are declared with <span class="code">let</span> and <span class="code">const</span>.
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Constant (never changes)</p>
+                                <p class="code">
+                                    const variableName1 = 0<br>
+                                    const variableName2 = "test"<br>
+                                    const variableName3 = new Array()<br>
+                                </p>
+                                <p>Let (changes)</p>
+                                <p class="code">
+                                    let variableName1 = 0<br>
+                                    let variableName2 = "test"<br>
+                                    let variableName3 = new Array()<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
