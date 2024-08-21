@@ -1,0 +1,287 @@
+.filterButtonsContain{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: max-content;
+}
+
+.filterButtonContain{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #d3d3d3;
+    padding: 3px;
+    border-radius: 10px;
+    height: max-content;
+    margin: 5px;
+}
+
+.filterButtonContain input {
+    display: none;
+}
+
+.filterButtonContain label {
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.bentoBoxContain{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 33%);
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.elementContain{
+    display: flex;
+    flex-direction: column;
+    padding: -1px;
+    margin: 3px;
+    border: 2px solid lightgrey;
+    border-radius: 15px;
+    padding: 3px;
+    transition: .5s;
+}
+
+.elementTitle{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px 5px 0px 20px;
+    margin: 0;
+}
+.html .elementTitle{
+    background-color: #d45732 !important;
+}
+
+.css .elementTitle{
+    background-color: #334fe3 !important;
+}
+
+.elementTitle div{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+
+}
+.elementTitle div img{
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+
+}
+
+.exampleContain {
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #ebebeb;
+    padding: 5px;
+    margin: 0;
+    overflow: scroll;
+}
+
+.exampleContain div{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+}
+
+#text{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+#output {
+    background-color: white;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.code{
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+#image{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    overflow: visible !important;
+}
+
+#image .elementContain{
+    overflow: visible !important;
+}
+
+.imageContain {
+    width: 200px;
+    display: inline-block;
+    margin-left: 30px !important;
+}
+
+.imageContain img {
+    height: 100px;
+    transition: .5s;
+}
+
+.imageContain img:hover {
+    transform: scale(3);
+}
+
+canvas{
+    transition: .5s;
+}
+
+canvas:hover {
+    transform: scale(3);
+}
+
+video {
+    height: 100px;
+    transition: .5s;
+}
+
+video:hover {
+    transform: scale(3);
+}
+
+#colorElement{
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
+
+.colorContain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.colorContain div{
+    width: max-content;
+    padding: 20px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.backgroundColor{
+    background-color: blue !important;
+    color: white;
+}
+
+.color{
+    color: red;
+}
+
+.borderColor{
+    border: 3px solid green;
+}
+
+.all{
+    background-color: blue !important;
+    color: red;
+    border: 3px solid green;
+}
+
+#borderElement{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.solid{
+    border: 3px solid green;
+}
+
+.dotted{
+    border: 3px dotted green;
+}
+
+.radius{
+    background-color: lightgreen !important;
+    border: 3px solid green;
+    border-radius: 0px 10px 20px 40px !important;
+}
+
+.visibilityChange{
+    transition: opacity 1s;
+}
+
+.visibilityChange:hover{
+    opacity: 0;
+}
+
+.colorChange{
+    transition: background-color 1s;
+    color: white;
+    background-color: blue !important;
+}
+
+.colorChange:hover{
+    background-color: green !important;
+}
+
+#displayElement{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+}
+
+.displayInline{
+    display: inline-block !important;
+}
+
+.displayInline div{
+    display: inline-block !important;
+}
+
+.displayFlexContain{
+    display: flex;
+    flex-direction: row !important;
+}
+
+.displayFlex{
+    display: flex;
+    flex-direction: row !important;
+}
+
+.displayGrid{
+    display: grid !important;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.makeBlocks div{
+    width: 10px;
+    height: 10px;
+    border: 3px solid green;
+    margin: 10px
+}
+
+.javascript .elementTitle{
+    background-color: #d2bb39;
+}
+
+#dom{
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
+
+#functions{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
